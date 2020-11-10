@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sortable</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        font-size: 12px;
+      }
+
+      main {
+        max-width: 1440px;
+        margin: 0 auto;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #4caf50;
+        color: white;
+        cursor: pointer;
+      }
+
+      td,
+      th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      tr:hover {
+        background-color: #ddd;
+      }
+
+      th:nth-child(1) {
+        width: 30px;
+      }
+
+      th:nth-child(2),  th:nth-child(3), th:nth-child(10) {
+        width: 120px;
+      }
+
+      th:nth-child(4),  th:nth-child(5),  th:nth-child(6),   th:nth-child(7),   th:nth-child(8),   th:nth-child(9), th:nth-child(11), th:nth-child(12),th:nth-child(13), th:nth-child(15) {
+        width: 40px;
+      }
+
+      .search {
+        position: relative;
+        padding: 10px;
+   
+      }
+
+      input {
+        width: 100%;
+        box-sizing: border-box;
+        padding-right: 140px;
+      }
+
+      .insearch {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        height: 34px;
+      }
+
+      .cap {
+        float: right;
+        margin: 10px;
+      }
+
+      #pagination {
+        margin: 20px 0;
+      }
+
+      span {
+        margin: 10px;
+        line-height: 50px;
+      }
+      button {
+        margin-right: 2px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="search">
+        <input type="text" placeholder="hero search" />
+        <select name="column" class="insearch">
+          <option value=1>Name</option>
+          <option value=2>Full Name</option>
+          <option value=9>Race</option>
+          <option value=10>Gender</option>
+          <option value=13>Place of Birth</option>
+          <option value=14>Alignment</option>
+        </select> 
+      </div>
+  
+      <span></span>
+  
+      <div class="cap">
+        <label for="capacity">Rows on page:</label>
+        <select name="capacity">
+          <option value=10>10</option>
+          <option value=20 selected>20</option>
+          <option value=50>50</option>
+          <option value=100>100</option>
+          <option value=563>All</option>
+        </select> 
+      </div>
+    
+      <table>
+        <thead>
+          <tr>
+            <th tip="no">Icon</th>
+            <th tip="str">Name</th>
+            <th tip="str">Full Name</thtip="str">
+            <th>Intell</th>
+            <th>Streng</th>
+            <th>Speed</thtip="str">
+            <th>Durabl</th>
+            <th>Power</thtip="str">
+            <th>Combat</thtip="str">
+            <th tip="str">Race</th>
+            <th tip="str">Gender</th>
+            <th tip="numstr">Height</th>
+            <th tip="numstr">Weight</th>
+            <th tip="str">Place of birth</th>
+            <th tip="str">Alignement</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div id="pagination"></div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
